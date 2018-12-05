@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 
 const commands = require(__dirname + "/src/commands.js");
 const version  = require(__dirname + "/src/version.js");
-const config   = require(__dirname + "/config.json");
+
 
 var client = new Discord.Client({ "maxCachedMessages" : 200, "revive" : true });
 
