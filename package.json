@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "neko-js",
+  "version": "0.9.0-beta",
+  "description": "Port of Kusoneko's Nekobot to NodeJS",
+  "author": "Seph D. Warwick <kazuhiroichi@gmail.com>",
+  "maintainers": [
+    "TehSeph <kazuhiroichi@gmail>",
+    "Kusoneko <kusoneko@kusoneko.moe>"
+  ],
+  "homepage": "https://github.com/TehSeph/Neko.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TehSeph/Neko.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TehSeph/Neko.js/issues"
+  },
+  "license": "MIT",
+  "main": "./neko.js",
+  "dependencies": {
+    "discord.js": "^7.0.0",
+    "esrever": "^0.2.0",
+    "humanize-duration": "^3.4.0",
+    "node-dir": "^0.1.10",
+    "request": "^2.65.0",
+    "require-directory": "^2.1.1",
+    "semver": "^5.1.0",
+    "xml2js": "^0.4.13"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=5.0.0",
+    "npm" : ">=3.3.6"
+  },
+  "scripts": {
+    "start": "node neko.js --harmony"
+  }
+}

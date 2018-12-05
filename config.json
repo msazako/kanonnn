@@ -1,0 +1,9 @@
+{
+    "token" : "process.env.token",
+    "email" : "msazako@gmail.com",
+    "password" : "imm0rta1S",
+    "game" : "Lie of Caelum",
+    "commands" : {
+        "prefix" : "!"
+    }
+}
