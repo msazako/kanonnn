@@ -32,4 +32,5 @@ client.on("message", message => {
 });
 
 // -- Program Entry Point (Login) ------------------------------------------------------------------
-client.login(process.env.BOT_TOKEN);
+if (config.token) client.loginWithToken(config.token);
+else client.login(config.email, config.password);
