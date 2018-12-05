@@ -4,7 +4,6 @@ const Discord = require("discord.js");
 
 const commands = require(__dirname + "/src/commands.js");
 const version  = require(__dirname + "/src/version.js");
-const config   = require(__dirname + "/config.json");
 
 
 var client = new Discord.Client({ "maxCachedMessages" : 200, "revive" : true });
@@ -19,18 +18,15 @@ client.once("ready", () => { client.setPlayingGame(config.game || `Neko.js ${ver
 // Command Reciever
 // =================================================================================================
 
-client.on("message", message => {
-
-    if (message.author.equals(client.user)) return; // prevent bot from gaining sentience
-
-    // -- Command Parsers --------------------------------------------------------------------------
-    //let command = admin.parse(client, message, config);
-    let command = commands.parse(client, message, config);
-    //command = music.parse(client, message, config);
-    if (command) command.execute(client, message, config);
-
+client.on('ready', () => {
+    console.log('I am ready!');
 });
 
-// -- Program Entry Point (Login) ------------------------------------------------------------------
-if (config.token) client.loginWithToken(config.token);
-else client.login(config.email, config.password);
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
