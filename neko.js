@@ -7,9 +7,13 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
+if (message.author.equals(client.user)) return; // prevent bot from gaining sentience
+
+    // -- Command Parsers --------------------------------------------------------------------------
+    //let command = admin.parse(client, message, config);
+    let command = commands.parse(client, message, config);
+    //command = music.parse(client, message, config);
+    if (command) command.execute(client, message, config);
 });
 
 // THIS  MUST  BE  THIS  WAY
