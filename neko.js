@@ -1,6 +1,16 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
+client.on('ready', () => {
+    // Set bot status to: "Playing with JavaScript"
+    client.user.setActivity("with your loved ones' carcasses")
+
+    // Alternatively, you can set the activity to any of the following:
+    // PLAYING, STREAMING, LISTENING, WATCHING
+    // For example:
+    // client.user.setActivity("TV", {type: "WATCHING"})
+})
+
 client.on('message', (receivedMessage) => {
     if (receivedMessage.author == client.user) { // Prevent bot from responding to its own messages
         return
@@ -25,21 +35,21 @@ function processCommand(receivedMessage) {
     } else if (primaryCommand == "multiply") {
         multiplyCommand(arguments, receivedMessage)
     } else {
-        receivedMessage.channel.send("I don't understand the command. Try `!help` or `!multiply`")
+        receivedMessage.channel.send("Try speaking to me like this: `!help` or `!multiply` and I'll probably won't stab your eyes out and make you eat them.")
     }
 }
 
 function helpCommand(arguments, receivedMessage) {
     if (arguments.length > 0) {
-        receivedMessage.channel.send("It looks like you might need help with " + arguments)
+        receivedMessage.channel.send("You should totally google " + arguments)
     } else {
-        receivedMessage.channel.send("I'm not sure what you need help with. Try `!help [topic]`")
+        receivedMessage.channel.send("Mouuuu... I don't understand whatchu mean. Try `!help [topic]`")
     }
 }
 
 function multiplyCommand(arguments, receivedMessage) {
     if (arguments.length < 2) {
-        receivedMessage.channel.send("Not enough values to multiply. Try `!multiply 2 4 10` or `!multiply 5.2 7`")
+        receivedMessage.channel.send("I like math... especially when adding people in my list to kill... hehehehe... Try `!multiply 2 4 10` or `!multiply 5.2 7`")
         return
     }
     let product = 1 
