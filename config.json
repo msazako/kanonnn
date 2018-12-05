@@ -1,9 +1,0 @@
-{
-    "token" : "NTE5Njc3ODQwMDExMDM0NjI0.DujRIg.t-HfT1OgJl_-RY9Jai8Fp5cWS-Q",
-    "email" : "bot@email.com",
-    "password" : "password",
-    "game" : "custom game name",
-    "commands" : {
-        "prefix" : "!"
-    }
-}
