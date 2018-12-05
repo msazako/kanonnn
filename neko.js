@@ -1,7 +1,5 @@
-"use strict"; // Required by Node for ES6
-
 const Discord = require("discord.js");
-
+const client = new Discord.Client();
 const commands = require(__dirname + "/src/commands.js");
 const version  = require(__dirname + "/src/version.js");
 
